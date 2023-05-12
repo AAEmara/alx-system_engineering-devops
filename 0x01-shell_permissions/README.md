@@ -15,3 +15,8 @@ Prints the names of the groups the current user
 is part of using `id` command combined with `-G`
 for all group IDs and `-n` option for printing the
 names of the groups instead of the IDs.
+
+Task3 3-new_owner:
+Changes the owner of the file named "hello" to
+the user named "betty" by using the `chown`
+command.
