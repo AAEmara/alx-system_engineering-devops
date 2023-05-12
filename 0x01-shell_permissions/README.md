@@ -50,3 +50,12 @@ with octal notation `007` which indicates:
 No Permission -- Owner
 No Permission -- Group Owner
 Read, Write, and Execute Permission -- Others
+
+Task9 9-John_Doe:
+Gives certain permissions to the owner, the 
+group owner, and the other users by using `chmod`
+with octal notation `753` which indicates:
+Read, Write, and Execute Permission -- Owner
+Read, and Execute Permission -- Group Owner
+Write, and Execute Permission -- Others
+
