@@ -64,3 +64,8 @@ Gives the same permissions of a referece file
 named "olleh" to the file named "hello" by using
 `chmod` command with `--reference=RFILE` option.
 
+Task11 11-directories_permissions:
+Gives only all subdirectories the execution 
+permission by using the `chmod` command combined
+with the `a`, `+`, and `X` file mode bits
+parameters.
