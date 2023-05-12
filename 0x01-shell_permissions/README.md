@@ -59,3 +59,8 @@ Read, Write, and Execute Permission -- Owner
 Read, and Execute Permission -- Group Owner
 Write, and Execute Permission -- Others
 
+Task10 10-mirror_permissions:
+Gives the same permissions of a referece file
+named "olleh" to the file named "hello" by using
+`chmod` command with `--reference=RFILE` option.
+
