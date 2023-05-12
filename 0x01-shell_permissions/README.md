@@ -20,3 +20,7 @@ Task3 3-new_owner:
 Changes the owner of the file named "hello" to
 the user named "betty" by using the `chown`
 command.
+
+Task4 4-empty:
+Creates a new empty file called "hello" by using
+`touch` command.
