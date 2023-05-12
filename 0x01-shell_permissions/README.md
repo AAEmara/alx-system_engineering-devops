@@ -42,3 +42,11 @@ Adds execution permission to the owner, the
 group owner, and the other users by using `chmod`
 command with `ugo`, `+`, and `x` file mode bits
 parameters on the file named "hello".
+
+Task8 8-James_Bond:
+Gives certain permissions to the owner, the 
+group owner, and the other users by using `chmod`
+with octal notation `007` which indicates:
+No Permission -- Owner
+No Permission -- Group Owner
+Read, Write, and Execute Permission -- Others
