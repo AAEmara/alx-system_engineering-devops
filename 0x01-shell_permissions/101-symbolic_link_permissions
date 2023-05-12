@@ -1,2 +1,2 @@
 #!/bin/bash
-chmown -h vincent:staff _hello
+chmown --dereference vincent:staff _hello
