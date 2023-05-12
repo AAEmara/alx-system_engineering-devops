@@ -24,3 +24,8 @@ command.
 Task4 4-empty:
 Creates a new empty file called "hello" by using
 `touch` command.
+
+Task5 5-execute:
+Adds execution permission to the owner of the
+file named "hello"; by using the `chmod` command
+combined with `u+x` mode parameter.
