@@ -29,3 +29,9 @@ Task5 5-execute:
 Adds execution permission to the owner of the
 file named "hello"; by using the `chmod` command
 combined with `u+x` mode parameter.
+
+Task6 6-multiple_permissions:
+Adds execute permission to the owner and the
+group owner, and read permission to other users;
+by using `chmod` command with `ugo`, `+`,and `rx`
+file mode bits parameters.
