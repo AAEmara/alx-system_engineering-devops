@@ -31,7 +31,14 @@ file named "hello"; by using the `chmod` command
 combined with `u+x` mode parameter.
 
 Task6 6-multiple_permissions:
-Adds execute permission to the owner and the
+Adds execution permission to the owner and the
 group owner, and read permission to other users;
-by using `chmod` command with `ugo`, `+`,and `rx`
-file mode bits parameters.
+by using `chmod` command with `ugo`, `+`, and `rx`
+file mode bits parameters on the file named
+"hello".
+
+Task7 7-everybody:
+Adds execution permission to the owner, the 
+group owner, and the other users by using `chmod`
+command with `ugo`, `+`, and `x` file mode bits
+parameters on the file named "hello".
