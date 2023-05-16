@@ -9,3 +9,7 @@ Diplays a confused smiley "(Ôo) from the
 standard output using `echo` command while
 adding the special character `\` backslash
 out side quoting to print the `'` single quote.
+
+Task2 2-hellofile:
+Displays the content of a file named
+`/etc/passwd` using the `cat` command.
