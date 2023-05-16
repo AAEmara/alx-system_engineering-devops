@@ -21,3 +21,7 @@ combined with the `cat` command.
 Task4 4-lastlines:
 Displays the last 10 lines of `/etc/passwd` file
 with the help of `tail` command.
+
+Task5 5-firstlines:
+Displays the first 10 lines of `/etc/passwd` file
+with the help of `head` command.
