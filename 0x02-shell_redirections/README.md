@@ -17,3 +17,7 @@ Displays the content of a file named
 Task3 3-twofiles:
 Displays the content of two consequent files
 combined with the `cat` command.
+
+Task4 4-lastlines:
+Displays the last 10 lines of `/etc/passwd` file
+with the help of `tail` command.
