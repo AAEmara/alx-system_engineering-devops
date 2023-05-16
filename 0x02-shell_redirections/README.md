@@ -13,3 +13,7 @@ out side quoting to print the `'` single quote.
 Task2 2-hellofile:
 Displays the content of a file named
 `/etc/passwd` using the `cat` command.
+
+Task3 3-twofiles:
+Displays the content of two consequent files
+combined with the `cat` command.
