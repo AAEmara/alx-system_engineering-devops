@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# Printing "bad luck from China" for the iteration no. 4
+#+ and "bad luck from Japan" for the iteration no. 9
+#+ and "bad luck from Italy" for the iteration no. 17
+#+ while displaying the numbers from 1 to 20 for every iteration
+#+ using the while loop and case statement.
+i="1"
+while [ $i -ne 21 ]; do
+    echo $i
+    if [ $i -eq 4 ]
+    then
+        echo "bad luck from China"
+    elif [ $i -eq 9 ]
+    then
+        echo "bad luck from Japan"
+    elif [ $i -eq 17 ]
+    then
+        echo "bad luck from Italy"
+    fi
+    ((i++))
+done
