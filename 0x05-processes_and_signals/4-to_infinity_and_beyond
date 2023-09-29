@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-# Printing "To infinty and beyond" indefinite amount of times
+# Printing "To infinity and beyond" indefinite amount of times
 # with a delay between each print for 2 seconds.
 i="0"
 while [ $i -ne 1 ]; do
-    echo "To infinty and beyond"
+    echo "To infinity and beyond"
     sleep 2
 done
