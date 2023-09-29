@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Printing the PID of each process corresponding to "bash" using pgrep command.
+pgrep -l bash
