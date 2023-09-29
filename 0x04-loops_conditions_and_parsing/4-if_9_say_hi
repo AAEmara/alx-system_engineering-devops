@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Printing "Best School" 10 times, but the 9th itereation includes
+#+ a "Hi" after "Best School" using while loop and if condition.
+i="1"
+while [ $i -ne 11 ]; do
+    echo "Best School"
+    if [ $i -eq 9 ]
+    then
+        echo "Hi"
+    fi
+    ((i++))
+done
