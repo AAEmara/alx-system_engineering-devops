@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
-# Printing a list that describes the currently running processes
+# Printing all process for all users, including processes without TTY
+#+ while displaying it  in user-oriented format,
+#+ and showing process hierarchy.
 #+ where it includes (USER,PID,%CPU,%MEM,VSZ,RSS,TTY,STAT,START,TIME,COMMAND).
-ps -Ao user,pid,pcpu,pmem,vsz,rss,tt,stat,bsdstart,time,command --sort pid
+ps u -AH
