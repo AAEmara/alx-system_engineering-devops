@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Printing a list that describes the currently running processes
+#+ where it includes (USER,PID,%CPU,%MEM,VSZ,RSS,TTY,STAT,START,TIME,COMMAND).
+ps -Ao user,pid,pcpu,pmem,vsz,rss,tt,stat,bsdstart,time,command --sort pid
