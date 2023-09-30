@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # Prints "To infinty and beyond" indefinte amount of time
-#+ while handling the SIGTERM signal and printing "I am invincible!!".
+#+ while handling the SIGTERM signal and printing "I am invincible!!!".
 
 # SIGTRM handling funciton.
 sigterm_handle(){
-    echo "I am invincible!!"
+    echo "I am invincible!!!"
 }
 
 # Using the `trap` command to use the sigterm_handle when having
