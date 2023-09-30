@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Killing a certain process using `kill` command.
+to_kill=$(pgrep -f ./4-to_infinity_and_beyond)
+kill $to_kill
