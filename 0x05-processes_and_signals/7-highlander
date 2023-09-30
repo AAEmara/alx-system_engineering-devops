@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# Prints "To infinty and beyond" indefinte amount of time
+#+ while handling the SIGTERM signal and printing "I am invincible!!".
+
+# SIGTRM handling funciton.
+sigterm_handle(){
+    echo "I am invincible!!"
+}
+
+# Using the `trap` command to use the sigterm_handle when having
+#+ a SIGTERM signal.
+trap sigterm_handle SIGTERM
+
+# While loop to print "To infinity and beyond" every 2 seconds.
+i="0"
+while [ $i -ne 1 ]; do
+    echo "To infinity and beyond"
+    sleep 2
+done
