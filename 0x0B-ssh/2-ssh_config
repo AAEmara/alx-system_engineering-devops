@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Configuring the local SSH client to connect to a server
+# without typing a password.
+echo "IdentityFile ~/.ssh/school" > ~/.ssh/config
+echo "PasswordAuthentication no" >> ~/.ssh/config
