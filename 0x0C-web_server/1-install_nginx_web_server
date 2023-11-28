@@ -5,5 +5,5 @@ sudo su
 apt-get update && sudo apt-get install nginx -y
 sed -i '/s/listen *[0-9]\+;/listen 80;/g' /etc/nginx/sites-enabled/default
 mkdir -p /var/www/html
-echo "Hello World!" >> /var/www/html/index.html
+echo "Hello World!" | tee /var/www/html/index.html
 service nginx restart
