@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Installing Nginx on `web-01` server.
+# Making the Nginx server listen on port 80870
+sudo su
+apt-get update && sudo apt-get install nginx -y
+sed -i '/s/listen *[0-9]\+;/listen 80;/g' /etc/nginx/sites-enabled/default
+mkdir -p /var/www/html
+echo "<html><head>Hello World!<head/><html/>" >> /var/www/html/index.html
+service nginx restart
