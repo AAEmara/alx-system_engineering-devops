@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Installing Nginx on `web-01` server.
+# Making the Nginx server listen on port 80.
+sudo su
+apt-get update && sudo apt-get install nginx -y
+sed -i '/s/listen [0-9]\+;/listen 80;/g' /etc/nginx/sites-enabled/default
+sub='server_name emaracodes.tech;\n rewrite ^/$ emaracodes.tech/redirectme\ 
+    permenant;'
+sed -ie '/s/server_name/$sub' /etr/nginx/sites-enabled/default
+echo "Hello World!" | sudo tee /var/www/html/index.html
+service nginx restart
