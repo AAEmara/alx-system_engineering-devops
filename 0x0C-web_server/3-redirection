@@ -4,8 +4,8 @@
 sudo su
 apt-get update && sudo apt-get install nginx -y
 sed -i '/s/listen [0-9]\+;/listen 80;/g' /etc/nginx/sites-enabled/default
-sub='server_name emaracodes.tech;\n rewrite ^/$ emaracodes.tech/redirectme\ 
-    permenant;'
-sed -ie '/s/server_name/$sub' /etr/nginx/sites-enabled/default
+word="server_name emaracodes.tech;\n rewrite ^/$ "\
+    "https://www.youtube.com/watch?v=QH2-TGUlwu4\ permenant;"
+sed -ie "/s/server_name/${word}/g" /etr/nginx/sites-enabled/default
 echo "Hello World!" | sudo tee /var/www/html/index.html
 service nginx restart
