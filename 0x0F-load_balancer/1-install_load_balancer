@@ -10,14 +10,15 @@ echo "CONFIG=/etc/haproxy/haproxy.cfg" | sudo tee -a /etc/default/haproxy
 
 echo "
 frontend front-web
-    bind *:80
-    default_backend back-web
+	mode http
+	bind *:80
+	default_backend back-web
 
 backend back-web
-    balance roundrobin
-    mode http
-    server 187237-web-01 18.235.243.33:80 check
-    server 187237-web-02 54.237.84.225:80 check" | sudo tee -a /etc/haproxy/haproxy.cfg
+	balance roundrobin
+	mode http
+	server 187237-web-01 18.235.243.33:80 check
+	server 187237-web-02 54.237.84.225:80 check" | sudo tee -a /etc/haproxy/haproxy.cfg
 sudo service haproxy restart
 # Run the following command to debug.
 #haproxy -f /etc/haproxy/haproxy.cfg -c
