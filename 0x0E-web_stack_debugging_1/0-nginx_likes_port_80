@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
 # Installing Nginx Web Server and Configuring it.
-sudo apt-get update && sudo apt-get install nginx -y
+sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 sudo service nginx restart
-curl 0:80
-curl -sI 0:80
