@@ -2,4 +2,5 @@
 # Installing Nginx Web Server and Configuring it.
 sudo apt-get update && sudo apt-get install nginx -y
 sudo service nginx restart
-curl 0:80 && curl -sI 0:80
+curl 0:80
+curl -sI 0:80
