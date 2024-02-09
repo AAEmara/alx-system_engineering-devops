@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# Displaying information about domains and subdomains.
+domain=$1
+status () {
+  if [ -z "$2" ]
+  then
+    www=$(dig "www.$domain" | awk '/^www\.'"$domain"'/ {print $5}')
+    echo "The subdomain www is a A record and points to ""$www"
+    lb=$(dig "lb-01.$domain" | awk '/^lb-01\.'"$domain"'/ {print $5}')
+    echo "The subdomain lb-01 is a A record and points to ""$lb"
+    web1=$(dig "web-01.$domain" | awk '/^web-01\.'"$domain"'/ {print $5}')
+    echo "The subdomain web-01 is a A record and points to ""$web1"
+    web2=$(dig "web-02.$domain" | awk '/^web-02\.'"$domain"'/ {print $5}')
+    echo "The subdomain web-02 is a A record and points to ""$web2"
+  else
+    subdomain=$2
+    ip=$(dig "$subdomain.$domain" | awk '/^'"$subdomain"'\.'"$domain"'/ {print $5}')
+    echo "The subdomain $subdomain is a A record and points to ""$ip"
+  fi
+}
+status "$1" "$2"
