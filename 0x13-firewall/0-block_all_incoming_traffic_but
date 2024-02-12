@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Installing `ufw` firewall and setting up the firewall rules.
+# Installing `ufw` firewall.
+sudo apt install ufw -y
+# Denying all incoming connections and allowing all outgoing connections.
+sudo ufw default deny incoming && sudo ufw default allow outgoing
+# Allowing incoming connections via port 22 (SSH).
+sudo ufw allow 22
+# Allowing incoming connections via port 443 (HTTPS SSL).
+sudo ufw allow 443
+# Allowing incoming connectionsw via port 80 (HTTP).
+sudo ufw allow 80
+# Enabling the `ufw` firewall.
+echo "y" | sudo ufw enable
+# Checking on the `ufw` firewall rules.
+# sudo ufw status verbose
