@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Making Nginx running as the `nginx` user.
+sudo chown nginx:nginx /etc/nginx/nginx.conf
+chmod 640 /etc/nginx/nginx.conf
+sudo sed -i "s/\#user www\-data/user nginx nginx/g" /etc/nginx/nginx.conf
+sudo sed -i "s/listen 80/listen 8080/g" /etc/nginx/sites-available/default
+sudo sed -i "s/listen \[\:\:\]\:80/listen \[\:\:\]\:8080/g" /etc/nginx/sites-available/default
+sudo netstat -tulpn | grep :8080 | awk -F " " '{print $7}' | awk -F "/" '{print $1}' | xargs kill
+sudo -u nginx service nginx start

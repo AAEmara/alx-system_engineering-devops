@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Changing the `superuser` to the given argument and then returning to the
+#+ root as a `superuser`.
+sudo -u "$1" whoami
