@@ -34,7 +34,7 @@ def main():
     for todo in done_list:
         print(f"\t {todo['title']}")
 
-    with open('USER_ID.csv', mode='w', encoding='utf-8') as w_file:
+    with open(f'{user_id}.csv', mode='w', encoding='utf-8') as w_file:
         for task in user_todo_list:
             w_file.write(f'\"{task["userId"]}\",\"{user_dict["username"]}\",'
                          f'\"{task["completed"]}\",\"{task["title"]}\"\n')
