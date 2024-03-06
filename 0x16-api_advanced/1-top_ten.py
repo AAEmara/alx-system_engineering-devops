@@ -14,17 +14,19 @@ def top_ten(subreddit):
     check_url = 'https://www.reddit.com/api/search_reddit_names.json'
     subred_check = requests.get(check_url,
                                 params=subred_params)
-    subred_check_text = subred_check.content.text
+    subred_check_text = subred_check.text
     subred_obj = json.loads(subred_check_text)
-    subred_check_name = subred_check_dict['names'][0]
-    if (subred_check_name):
-        hot_url = f'https://www.reddit.com/r/{subreddit}/hot'
+    if (subred_obj['names'][0]):
+        hot_url = f'https://www.reddit.com/r/{subreddit}/hot.json'
         subred_hot = requests.get(hot_url)
-        hot_obj = json.loads(subred_hot.content.text)
+        hot_obj = json.loads(subred_hot.text)
         hot_list = hot_obj['data']['children']
         titles_list = list()
+        i = 0
         for post in hot_list:
-            titles_list.append(post['data']['title'])
-        print(titles_list)
+            print(post['data']['title'])
+            i += 1
+            if i == 10:
+                return
     else:
         print(None)
