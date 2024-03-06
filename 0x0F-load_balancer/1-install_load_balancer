@@ -16,8 +16,8 @@ frontend front-web
 
 backend back-web
 	balance roundrobin
-	server 187237-web-01 18.235.243.33:80 check
-	server 187237-web-02 54.237.84.225:80 check" | sudo tee -a /etc/haproxy/haproxy.cfg
+	server 187237-web-01 100.26.171.111:80 check
+	server 187237-web-02 100.25.162.4:80 check" | sudo tee -a /etc/haproxy/haproxy.cfg
 sudo service haproxy restart
 # Run the following command to debug.
 #haproxy -f /etc/haproxy/haproxy.cfg -c
