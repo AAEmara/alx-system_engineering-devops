@@ -8,7 +8,7 @@ def number_of_subscribers(subreddit):
     """Querying for the number of subscribers for a specific subreddit."""
     website = f"https://www.reddit.com/r/{subreddit}/about.json"
     response = requests.get(website, allow_redirects=False)
-    if response.status_code == 404:
+    if response.status_code != 200:
         return (0)
     py_objs = response.json()
     data_objs = py_objs["data"]
