@@ -15,7 +15,7 @@ def recurse(subreddit, hot_list=[], count=0, after=None):
                             headers=my_user_agent,
                             allow_redirects=False)
 
-    if response.status_code == 404:
+    if response.status_code != 200:
         return (None)
 
     py_objs = response.json()
@@ -25,9 +25,11 @@ def recurse(subreddit, hot_list=[], count=0, after=None):
     for child in children_objs:
         title = child["data"]["title"]
         hot_list.append(title)
-        counter = count + 1
+        count += 1
 
-    if not after:
+    if not after and not len(hot_list):
+        return (None)
+    elif not after:
         return (hot_list)
 
-    return (recurse(subreddit, hot_list, counter, after))
+    return (recurse(subreddit, hot_list, count, after))
