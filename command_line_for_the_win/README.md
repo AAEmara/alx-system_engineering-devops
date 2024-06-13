@@ -2,11 +2,11 @@ Command line for the win Project README
 
 Uploading the images using sftp:
 
-1- Using your local machine with the sftp command as following:
+1- Use your local machine with the sftp command as follows:
 
     $ sftp <username>@<remote hostname>
 
-2- Entering the password after being propmted by your local cmd.
+2- Enter the password after being prompted by your local cmd.
 
 3- Change your current remote working directory using `cd` command:
 
@@ -30,6 +30,6 @@ Uploading the images using sftp:
 
     sftp> put *_9_*
 
-8- Check the remote destionation have the required files using `ls` command:
+8- Check the remote destination has the required files using `ls` command:
 
     sftp> ls
